@@ -20,4 +20,9 @@ export class ListeProduitsComponent implements OnInit {
     ];
   }
 
+  ajouterProduit(produit : Produit) {
+    console.log(produit);
+    this.produits.push(produit);
+  }
+
 }

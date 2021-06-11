@@ -1,36 +1,36 @@
 <h2>Ajout d'un nouveau produit</h2>
-<form>
+<form (ngSubmit)="ajouter(f)" #f="ngForm">
   <div class="mb-3">
     <label for="id" class="form-label">Id</label>
-    <input type="number" class="form-control" id="id">
+    <input type="number" class="form-control" id="id" ngModel name="id">
   </div>
   <div class="mb-3">
     <label for="nom" class="form-label">Nom</label>
-    <input type="text" class="form-control" id="nom">
+    <input type="text" class="form-control" id="nom" ngModel name="nom">
   </div>
   <div class="mb-3">
     <label for="cas" class="form-label">CAS</label>
-    <input type="text" class="form-control" id="cas">
+    <input type="text" class="form-control" id="cas" ngModel name="cas">
   </div>
   <div class="mb-3">
     <label for="formule" class="form-label">Formule linaire</label>
-    <input type="text" class="form-control" id="formule">
+    <input type="text" class="form-control" id="formule" ngModel name="formule">
   </div>
   <div class="mb-3">
     <label for="masse" class="form-label">Masse moléculaire</label>
-    <input type="text" class="form-control" id="masse">
+    <input type="text" class="form-control" id="masse" ngModel name="masse">
   </div>
   <div class="mb-3">
     <label for="description" class="form-label">Produit description</label>
-    <input type="text" class="form-control" id="description">
+    <input type="text" class="form-control" id="description" ngModel name="description">
   </div>
   <div class="mb-3">
     <label for="quantite" class="form-label">Quantité</label>
-    <input type="number" class="form-control" id="quantite">
+    <input type="number" class="form-control" id="quantite" ngModel name="quantite">
   </div>
   <div class="mb-3">
     <label for="localisation" class="form-label">Localisation</label>
-    <input type="text" class="form-control" id="localisation">
+    <input type="text" class="form-control" id="localisation" ngModel name="localisation">
   </div>
   <button type="submit" class="btn btn-primary">Ajouter</button>
 </form>
