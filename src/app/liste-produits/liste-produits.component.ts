@@ -43,4 +43,8 @@ export class ListeProduitsComponent implements OnInit {
     this.produits[indice] = produit;
     this.changerAction("");
   }
+
+  supprimer(id : number) : void {
+    this.produits = this.produits.filter(p => p.id != id);
+  }
 }

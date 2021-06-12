@@ -20,7 +20,7 @@ export class ModificationComponent implements OnInit {
   }
 
   modifier(f : NgForm) : void {
-    let p = new Produit(f.value.id, f.value.nom, f.value.cas, f.value.formule, f.value.masseMoleculaire, f.value.description, f.value.quantite, f.value.localisation);
+    let p = new Produit(f.value.id, f.value.nom, f.value.cas, f.value.formule, f.value.masse, f.value.description, f.value.quantite, f.value.localisation);
     this.modifProduit.emit(p);
   }
 

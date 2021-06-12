@@ -12,6 +12,7 @@
       <th>Quantité</th>
       <th>Localisation</th>
       <th>Actions</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -24,9 +25,8 @@
       <td>{{p.description}}</td>
       <td>{{p.quantite}}</td>
       <td>{{p.localisation}}</td>
-      <td>
-        <button type="button" class="btn btn-success" (click)="modifier(p)">Modifier</button>
-      </td>
+      <td><button type="button" class="btn btn-success" (click)="modifier(p)">Modifier</button></td>
+      <td><button type="button" class="btn btn-danger" (click)="supprimer(p.id)">Supprimer</button></td>
     </tr>
   </tbody>
 </table>

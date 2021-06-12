@@ -20,7 +20,7 @@ export class AjoutComponent implements OnInit {
 
   ajouter(f : NgForm) {
     console.log(f);
-    this.produit = new Produit(f.value.id, f.value.nom, f.value.cas, f.value.formule, f.value.masseMoleculaire, f.value.description, f.value.quantite, f.value.localisation);
+    this.produit = new Produit(f.value.id, f.value.nom, f.value.cas, f.value.formule, f.value.masse, f.value.description, f.value.quantite, f.value.localisation);
     console.log(this.produit);
     this.ajoutProduit.emit(this.produit);
   }
