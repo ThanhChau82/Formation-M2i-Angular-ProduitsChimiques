@@ -8,9 +8,11 @@ import { Produit } from '../models/produit';
 })
 export class ListeProduitsComponent implements OnInit {
   produits : Produit[];
+  action : string;
 
   constructor() {
     this.produits = [];
+    this.action = "";
   }
 
   ngOnInit(): void {
@@ -23,6 +25,11 @@ export class ListeProduitsComponent implements OnInit {
   ajouterProduit(produit : Produit) {
     console.log(produit);
     this.produits.push(produit);
+    this.changerAction("");
+  }
+
+  changerAction(action : string) {
+    this.action = action;
   }
 
 }
