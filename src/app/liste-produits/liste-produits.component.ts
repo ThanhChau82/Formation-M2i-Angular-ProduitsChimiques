@@ -33,9 +33,14 @@ export class ListeProduitsComponent implements OnInit {
     this.action = action;
   }
 
-  modifierProduit(produit : Produit) : void {
+  modifier(produit : Produit) : void {
     this.changerAction("modifier");
     this.produit = produit;
   }
 
+  modifierProduit(produit : Produit) : void {
+    let indice = this.produits.findIndex(p => p.id == produit.id);
+    this.produits[indice] = produit;
+    this.changerAction("");
+  }
 }
