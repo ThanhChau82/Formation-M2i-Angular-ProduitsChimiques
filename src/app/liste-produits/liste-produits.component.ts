@@ -49,4 +49,9 @@ export class ListeProduitsComponent implements OnInit {
       this.produits = this.produits.filter(p => p.id != id);
     }
   }
+
+  consulter(produit : Produit) : void {
+    this.changerAction("consulter");
+    this.produit = produit; // Pour passer en paramètre le produit à consulter.
+  }
 }
