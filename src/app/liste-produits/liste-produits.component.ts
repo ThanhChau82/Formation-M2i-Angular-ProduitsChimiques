@@ -45,6 +45,8 @@ export class ListeProduitsComponent implements OnInit {
   }
 
   supprimer(id : number) : void {
-    this.produits = this.produits.filter(p => p.id != id);
+    if (prompt("Voulez-vous vraiment supprimer ce produit ?")) {
+      this.produits = this.produits.filter(p => p.id != id);
+    }
   }
 }
