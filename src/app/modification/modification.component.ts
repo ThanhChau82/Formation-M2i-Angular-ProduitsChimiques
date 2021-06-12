@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Produit } from '../models/produit';
 
 @Component({
   selector: 'app-modification',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./modification.component.css']
 })
 export class ModificationComponent implements OnInit {
+  @Input('produit') produit : Produit;
 
-  constructor() { }
+  constructor() {
+    this.produit = <Produit>{};
+  }
 
   ngOnInit(): void {
+    console.log(this.produit);
+  }
+
+  modifier(f : NgForm) : void {
+
   }
 
 }

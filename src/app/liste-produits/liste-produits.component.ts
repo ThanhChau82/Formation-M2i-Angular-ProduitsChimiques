@@ -8,10 +8,12 @@ import { Produit } from '../models/produit';
 })
 export class ListeProduitsComponent implements OnInit {
   produits : Produit[];
+  produit : Produit;
   action : string;
 
   constructor() {
     this.produits = [];
+    this.produit = <Produit>{};
     this.action = "";
   }
 
@@ -22,14 +24,18 @@ export class ListeProduitsComponent implements OnInit {
     ];
   }
 
-  ajouterProduit(produit : Produit) {
-    console.log(produit);
+  ajouterProduit(produit : Produit) : void {
     this.produits.push(produit);
     this.changerAction("");
   }
 
-  changerAction(action : string) {
+  changerAction(action : string) : void {
     this.action = action;
+  }
+
+  modifierProduit(produit : Produit) : void {
+    this.changerAction("modifier");
+    this.produit = produit;
   }
 
 }

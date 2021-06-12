@@ -11,6 +11,7 @@
       <th>Produit description</th>
       <th>Quantité</th>
       <th>Localisation</th>
+      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -23,8 +24,12 @@
       <td>{{p.description}}</td>
       <td>{{p.quantite}}</td>
       <td>{{p.localisation}}</td>
+      <td>
+        <button type="button" class="btn btn-success" (click)="modifierProduit(p)">Modifier</button>
+      </td>
     </tr>
   </tbody>
 </table>
 
 <app-ajout *ngIf="action == 'ajout'" (ajoutProduit)="ajouterProduit($event)"></app-ajout>
+<app-modification *ngIf="action == 'modifier'" [produit]="produit"></app-modification>
